@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edad1b86efd552a469229f665adc267b, type: 3}
+  m_Name: Data
+  m_EditorClassIdentifier: 
+  characters:
+  - name: Lascistay
+    moveSpeed: 5
+    jumpForce: 7
+    jumpTime: 0.3
+    maxHealth: 100
+  - name: Neee
+    moveSpeed: 4
+    jumpForce: 6
+    jumpTime: 0.2
+    maxHealth: 100
+  - name: Uther
+    moveSpeed: 2
+    jumpForce: 3
+    jumpTime: 0.2
+    maxHealth: 110
+  neee:
+    coolDown1: 0.3
+    projectile: {fileID: 7803070086133782340, guid: 39e60fbffff14f54ca265306ca3a65da,
+      type: 3}
+    projectileSpeed: 11
+    projectileDamage: 5
+    coolDown2: 3
+    wardrobe: {fileID: 7341478716420287074, guid: 3d517966daeaf824b8c48bba104b739d,
+      type: 3}
+    wardrobeSpeed: 13
+    wardrobeStun: 2
+  uther:
+    coolDown1: 8
+    timeBeforeAvailable: 10
+    InvulnerabilityTimer: 8
+    castingTime: 7
