@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public abstract class Character : MonoBehaviour
 {
@@ -21,6 +22,9 @@ public abstract class Character : MonoBehaviour
     private int maxHealth;
     private int currentHealth;
 
+    private Color victoryColor;
+    private string victoryText;
+
     [SerializeField] private int playerNumber;
 
     protected int characterIndex;
@@ -29,6 +33,9 @@ public abstract class Character : MonoBehaviour
     public int CurrentHealth { get => currentHealth; set { NumberChanged(currentHealth - value); currentHealth = value; } }
     public int PlayerNumber { get => playerNumber; set => playerNumber = value; }
     public bool CanMove { get => canMove; set => canMove = value; }
+    public Color VictoryColor { get => victoryColor; set => victoryColor = value; }
+    public string VictoryText { get => victoryText; set => victoryText = value; }
+    public float MoveSpeed { get => moveSpeed; set => moveSpeed = value; }
 
     #endregion
 
@@ -36,10 +43,12 @@ public abstract class Character : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
 
-        moveSpeed = FindObjectOfType<DataContainer>().data.characters[characterIndex].moveSpeed;
+        MoveSpeed = FindObjectOfType<DataContainer>().data.characters[characterIndex].moveSpeed;
         jumpForce = FindObjectOfType<DataContainer>().data.characters[characterIndex].jumpForce;
         jumpTime = FindObjectOfType<DataContainer>().data.characters[characterIndex].jumpTime;
         MaxHealth = FindObjectOfType<DataContainer>().data.characters[characterIndex].maxHealth;
+        VictoryColor = FindObjectOfType<DataContainer>().data.characters[characterIndex].color;
+        VictoryText = FindObjectOfType<DataContainer>().data.characters[characterIndex].victoryText;
         CurrentHealth = MaxHealth;
     }
 
@@ -59,7 +68,7 @@ public abstract class Character : MonoBehaviour
         }
 
         if (CanMove)
-            rb.velocity = new Vector2(moveInputs * moveSpeed, rb.velocity.y);
+            rb.velocity = new Vector2(moveInputs * MoveSpeed, rb.velocity.y);
     }
 
     public virtual void Update()
@@ -119,12 +128,6 @@ public abstract class Character : MonoBehaviour
 
         #region checks
 
-        if (currentHealth >= MaxHealth)
-            currentHealth = MaxHealth;
-
-        if (currentHealth <= 0)
-            currentHealth = 0;
-
         #endregion
     }
 
@@ -155,6 +158,11 @@ public abstract class Character : MonoBehaviour
 
     public virtual void NumberChanged(int value)
     {
+        if (currentHealth >= MaxHealth)
+            currentHealth = MaxHealth;
+
+        if (currentHealth <= 0)
+            Death();
 
     }
 
@@ -163,6 +171,12 @@ public abstract class Character : MonoBehaviour
         canMove = false;
         yield return new WaitForSeconds(stunTime);
         canMove = true;
+    }
+
+
+    public void Death()
+    {
+        
     }
 
     #endregion

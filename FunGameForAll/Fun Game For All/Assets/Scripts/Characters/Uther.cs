@@ -61,11 +61,13 @@ public class Uther : Character
     {
         CanMove = false;
         yield return new WaitForSeconds(castingTime);
+        FindObjectOfType<GameManager>().Win(PlayerNumber, VictoryText, GetComponent<Character>().VictoryColor);
         CanMove = true;
     }
 
     public override void NumberChanged(int value)
     {
+        base.NumberChanged(value);
         if (canBeInterrupted)
         {
             StopCoroutine("PDF");

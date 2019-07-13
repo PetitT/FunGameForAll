@@ -11,16 +11,4 @@ public class Projectile : MonoBehaviour
     {
         gameObject.transform.Translate(Vector2.right * Speed * Time.deltaTime);
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "Character")
-        {
-            Destroy(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
 }

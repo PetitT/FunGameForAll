@@ -10,6 +10,7 @@ public class Neee : Character
     private GameObject projectile;
     private float projectileSpeed;
     private int projectileDamage;
+
     private GameObject cannonTip;
 
     private bool canUse2 = true;

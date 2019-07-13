@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2083086940742541128}
   - component: {fileID: 6466341937030368440}
   - component: {fileID: -5621775546468563218}
+  - component: {fileID: -5164788266823600222}
   m_Layer: 0
   m_Name: grosmutti
   m_TagString: Untagged
@@ -120,5 +121,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d09a528ad678f2a46b4e7f6e5ded3e87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-5164788266823600222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7803070086133782340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3792a0b5a7cd4eb4d9b37e7c1f669df8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

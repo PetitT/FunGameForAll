@@ -12,22 +12,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edad1b86efd552a469229f665adc267b, type: 3}
   m_Name: Data
   m_EditorClassIdentifier: 
+  charPrefab:
+  - {fileID: 7659557014712939621, guid: e7a55e7449057344fad022aca8ccfbff, type: 3}
+  - {fileID: 1810946144174773289, guid: 8d6acf56283a4a343bbeb38961464b8e, type: 3}
+  - {fileID: 8177405301354084367, guid: d1ecff3f7af8e4348a3cd05515f6f4e4, type: 3}
+  - {fileID: 7236277854603738312, guid: 8a84a22c88fe4ad43829326a10c794a5, type: 3}
   characters:
   - name: Lascistay
     moveSpeed: 5
     jumpForce: 7
     jumpTime: 0.3
     maxHealth: 100
+    color: {r: 0.32974365, g: 0.36418992, b: 0.735849, a: 0.3372549}
+    victoryText: Get Racked
   - name: Neee
     moveSpeed: 4
     jumpForce: 6
     jumpTime: 0.2
     maxHealth: 100
+    color: {r: 0.8679245, g: 0.07778566, b: 0.07778566, a: 0.14117648}
+    victoryText: All those flavours and you chose to be salty...
   - name: Uther
     moveSpeed: 2
     jumpForce: 3
     jumpTime: 0.2
     maxHealth: 110
+    color: {r: 0.97404873, g: 1, b: 0, a: 0.5921569}
+    victoryText: Just dispell it you retard !
+  - name: UnicornKitty
+    moveSpeed: 7
+    jumpForce: 7
+    jumpTime: 0.4
+    maxHealth: 150
+    color: {r: 1, g: 0, b: 0.60341835, a: 0.5921569}
+    victoryText: NYAN NYAN
   neee:
     coolDown1: 0.3
     projectile: {fileID: 7803070086133782340, guid: 39e60fbffff14f54ca265306ca3a65da,
@@ -44,3 +62,17 @@ MonoBehaviour:
     timeBeforeAvailable: 10
     InvulnerabilityTimer: 8
     castingTime: 7
+  unicornKitten:
+    coolDown1: 1.5
+    projectile: {fileID: 8938409716483877625, guid: 107a1a2a8d08a9d42be3c09fa2835079,
+      type: 3}
+    projectileSpeed: 10
+    projectileSlow: 1
+    coolDown2: 30
+    heart: {fileID: 6369876411826224586, guid: cd4ff2ba9f7e29d48b78751a76e5c8f7, type: 3}
+    heartTimer: 45
+    explosionDuration: 1
+    explosionDamage: 1000000000
+  others:
+    explosion: {fileID: 3923914571648250625, guid: e8952027748244341ad0e6f2a87a00eb,
+      type: 3}
