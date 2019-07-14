@@ -28,9 +28,18 @@ public class Data : ScriptableObject
     [System.Serializable]
     public class Lascistay
     {
-        //[Header("Attack1")]
-        //[Header("Attack2")]
+        [Header("Attack1")]
+        public float blinkSpeed;
+        public Image blinkImage;
+
+        [Header("Attack2")]
+        public float slowForce;
+
+        [Header("Attack3")]
+        public AudioClip audioClip;
     }
+
+    public Lascistay lascistay;
 
     [System.Serializable]
     public class Neee
@@ -89,6 +98,7 @@ public class Data : ScriptableObject
     public class Others
     {
         public GameObject explosion;
+        public float restartTime;
     }
 
     public Others others;

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7236277854603738315}
   - component: {fileID: 7236277854603738316}
   - component: {fileID: 7236277854603738319}
+  - component: {fileID: -8148917400749023562}
   m_Layer: 0
   m_Name: UnicornKitty
   m_TagString: Character
@@ -133,6 +134,18 @@ CapsuleCollider2D:
   m_Offset: {x: -0.44446814, y: 0.1000061}
   m_Size: {x: 2.7973187, y: 4.1085052}
   m_Direction: 0
+--- !u!114 &-8148917400749023562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7236277854603738312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d65b74191c9731489ae72bb52528385, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7236277855885055516
 GameObject:
   m_ObjectHideFlags: 0

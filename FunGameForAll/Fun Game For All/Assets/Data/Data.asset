@@ -30,7 +30,7 @@ MonoBehaviour:
     jumpForce: 6
     jumpTime: 0.2
     maxHealth: 100
-    color: {r: 0.8679245, g: 0.07778566, b: 0.07778566, a: 0.14117648}
+    color: {r: 0.8679245, g: 0.07778566, b: 0.07778566, a: 0.5647059}
     victoryText: All those flavours and you chose to be salty...
   - name: Uther
     moveSpeed: 2
@@ -46,6 +46,12 @@ MonoBehaviour:
     maxHealth: 150
     color: {r: 1, g: 0, b: 0.60341835, a: 0.5921569}
     victoryText: NYAN NYAN
+  lascistay:
+    blinkSpeed: 0.03
+    blinkImage: {fileID: 1755316346110326606, guid: a0fb68a781f102d4ba9b83a4726c1bca,
+      type: 3}
+    slowForce: 0.08
+    audioClip: {fileID: 8300000, guid: 2dfdaa17984c14649b4b1a82ee7b26b0, type: 3}
   neee:
     coolDown1: 0.3
     projectile: {fileID: 7803070086133782340, guid: 39e60fbffff14f54ca265306ca3a65da,
@@ -70,9 +76,10 @@ MonoBehaviour:
     projectileSlow: 1
     coolDown2: 30
     heart: {fileID: 6369876411826224586, guid: cd4ff2ba9f7e29d48b78751a76e5c8f7, type: 3}
-    heartTimer: 45
+    heartTimer: 10
     explosionDuration: 1
     explosionDamage: 1000000000
   others:
     explosion: {fileID: 3923914571648250625, guid: e8952027748244341ad0e6f2a87a00eb,
       type: 3}
+    restartTime: 5

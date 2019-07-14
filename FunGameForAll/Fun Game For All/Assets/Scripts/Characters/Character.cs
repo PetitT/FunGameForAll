@@ -21,6 +21,7 @@ public abstract class Character : MonoBehaviour
 
     private int maxHealth;
     private int currentHealth;
+    private bool hasCheckedHealth = false;
 
     private Color victoryColor;
     private string victoryText;
@@ -125,10 +126,6 @@ public abstract class Character : MonoBehaviour
             
         }
         #endregion
-
-        #region checks
-
-        #endregion
     }
 
     #region methods
@@ -161,9 +158,10 @@ public abstract class Character : MonoBehaviour
         if (currentHealth >= MaxHealth)
             currentHealth = MaxHealth;
 
-        if (currentHealth <= 0)
+        if (currentHealth <= 0 && hasCheckedHealth)
             Death();
-
+        else if (currentHealth <= 0)
+            hasCheckedHealth = true;
     }
 
     public IEnumerator Assommer(float stunTime)
@@ -176,7 +174,7 @@ public abstract class Character : MonoBehaviour
 
     public void Death()
     {
-        
+        FindObjectOfType<GameManager>().Death(playerNumber);
     }
 
     #endregion

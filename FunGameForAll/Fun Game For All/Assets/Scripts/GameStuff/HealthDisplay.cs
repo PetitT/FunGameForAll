@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class HealthDisplay : MonoBehaviour
 {
     private Image healthBar;
+    private Text healthText;
     private float maxBarSize;
     private float currentBarSize;
     private int maxHealth;
@@ -16,10 +17,15 @@ public class HealthDisplay : MonoBehaviour
     {
         playerNumber = GetComponent<Character>().PlayerNumber;
         if (playerNumber == 1)
+        {
             healthBar = FindObjectOfType<HealthContainer>().healthBar1;
+            healthText = FindObjectOfType<HealthContainer>().healthText1;
+        }
         else
+        {
             healthBar = FindObjectOfType<HealthContainer>().healthBar2;
-
+            healthText = FindObjectOfType<HealthContainer>().healthText2;
+        }
         maxBarSize = healthBar.transform.localScale.x;
     }
 
@@ -30,5 +36,7 @@ public class HealthDisplay : MonoBehaviour
 
         float currentSizeX = maxBarSize / maxHealth * currentHealth;
         healthBar.transform.localScale = new Vector2(currentSizeX, healthBar.transform.localScale.y);
+
+        healthText.text = (currentHealth + " / " + maxHealth);
     }
 }
