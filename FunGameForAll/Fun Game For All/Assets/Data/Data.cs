@@ -93,6 +93,16 @@ public class Data : ScriptableObject
 
     public UnicornKitten unicornKitten;
 
+    [System.Serializable]
+    public class CancerAmalgam
+    {
+        [Header("Passive")]
+        public float timeToBuff;
+        public int healthBuff;
+        public float statsBuff;
+    }
+
+    public CancerAmalgam cancerAmalgam;
 
     [System.Serializable]
     public class Others

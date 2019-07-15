@@ -37,6 +37,7 @@ public abstract class Character : MonoBehaviour
     public Color VictoryColor { get => victoryColor; set => victoryColor = value; }
     public string VictoryText { get => victoryText; set => victoryText = value; }
     public float MoveSpeed { get => moveSpeed; set => moveSpeed = value; }
+    public float JumpForce { get => jumpForce; set => jumpForce = value; }
 
     #endregion
 
@@ -45,7 +46,7 @@ public abstract class Character : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         MoveSpeed = FindObjectOfType<DataContainer>().data.characters[characterIndex].moveSpeed;
-        jumpForce = FindObjectOfType<DataContainer>().data.characters[characterIndex].jumpForce;
+        JumpForce = FindObjectOfType<DataContainer>().data.characters[characterIndex].jumpForce;
         jumpTime = FindObjectOfType<DataContainer>().data.characters[characterIndex].jumpTime;
         MaxHealth = FindObjectOfType<DataContainer>().data.characters[characterIndex].maxHealth;
         VictoryColor = FindObjectOfType<DataContainer>().data.characters[characterIndex].color;
@@ -92,7 +93,7 @@ public abstract class Character : MonoBehaviour
                     isGrounded = false;
                     isJumping = true;
                     jumpTimeCounter = jumpTime;
-                    rb.velocity = Vector2.up * jumpForce;
+                    rb.velocity = Vector2.up * JumpForce;
                 }
 
             if (isJumping)
@@ -100,7 +101,7 @@ public abstract class Character : MonoBehaviour
                 {
                     if (jumpTimeCounter > 0)
                     {
-                        rb.velocity = Vector2.up * jumpForce;
+                        rb.velocity = Vector2.up * JumpForce;
                         jumpTimeCounter -= Time.deltaTime;
                     }
                     else

@@ -46,6 +46,13 @@ MonoBehaviour:
     maxHealth: 150
     color: {r: 1, g: 0, b: 0.60341835, a: 0.5921569}
     victoryText: NYAN NYAN
+  - name: CancerAmalgam
+    moveSpeed: 1
+    jumpForce: 1
+    jumpTime: 0.4
+    maxHealth: 50
+    color: {r: 1, g: 0.43138325, b: 0, a: 0.5921569}
+    victoryText: It was pure skill :)
   lascistay:
     blinkSpeed: 0.03
     blinkImage: {fileID: 1755316346110326606, guid: a0fb68a781f102d4ba9b83a4726c1bca,
@@ -79,6 +86,10 @@ MonoBehaviour:
     heartTimer: 10
     explosionDuration: 1
     explosionDamage: 1000000000
+  cancerAmalgam:
+    timeToBuff: 5
+    healthBuff: 20
+    statsBuff: 1
   others:
     explosion: {fileID: 3923914571648250625, guid: e8952027748244341ad0e6f2a87a00eb,
       type: 3}
