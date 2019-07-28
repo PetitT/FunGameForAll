@@ -17,6 +17,7 @@ MonoBehaviour:
   - {fileID: 1810946144174773289, guid: 8d6acf56283a4a343bbeb38961464b8e, type: 3}
   - {fileID: 8177405301354084367, guid: d1ecff3f7af8e4348a3cd05515f6f4e4, type: 3}
   - {fileID: 7236277854603738312, guid: 8a84a22c88fe4ad43829326a10c794a5, type: 3}
+  - {fileID: 4162758382008033583, guid: ffb65eb07dd10124a99e5525fcfd123c, type: 3}
   characters:
   - name: Lascistay
     moveSpeed: 5
@@ -90,6 +91,19 @@ MonoBehaviour:
     timeToBuff: 5
     healthBuff: 20
     statsBuff: 1
+    damageBuff: 10
+    attackDamage: 10
+    projectiles:
+    - {fileID: 7818446161267650802, guid: 9d2289ca9784baa428442b14f3a6e81b, type: 3}
+    - {fileID: 8929239048084369113, guid: ce1f489c799ae724cb0955cf573c3087, type: 3}
+    - {fileID: 5020698976909760268, guid: 1b65309238d61d3459516f6310598cc9, type: 3}
+    - {fileID: 4794353052249379545, guid: 16d3e91dca7acf94aa90dcd4ccefe70e, type: 3}
+    - {fileID: 5710791259937573918, guid: f96207b132004404db067db51a2ac376, type: 3}
+    coolDown2: 2
+    projectileDamage: 5
+    projectileSpeed: 2
+    brodeLaugh: {fileID: 8300000, guid: 5d353805db44e0649aa174286ce96a7d, type: 3}
+    coolDown3: 3
   others:
     explosion: {fileID: 3923914571648250625, guid: e8952027748244341ad0e6f2a87a00eb,
       type: 3}

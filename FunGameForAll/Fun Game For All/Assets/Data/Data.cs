@@ -100,6 +100,20 @@ public class Data : ScriptableObject
         public float timeToBuff;
         public int healthBuff;
         public float statsBuff;
+        public int damageBuff;
+
+        [Header("Attack1")]
+        public int attackDamage;
+
+        [Header("Attack2")]
+        public List<GameObject> projectiles = new List<GameObject>();
+        public float coolDown2;
+        public int projectileDamage;
+        public float projectileSpeed;
+
+        [Header("Attack3")]
+        public AudioClip brodeLaugh;
+        public float coolDown3;
     }
 
     public CancerAmalgam cancerAmalgam;
